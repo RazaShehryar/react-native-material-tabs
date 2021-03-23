@@ -15,7 +15,7 @@ interface TouchableProps {
 }
 
 const Touchable = (props: TouchableProps) =>
-  Platform.OS === 'ios' ? (
+  Platform.OS === 'ios' || Platform.OS === 'web' ? (
     <TouchableOpacity style={props.style} onPress={props.onPress}>
       {props.children}
     </TouchableOpacity>
